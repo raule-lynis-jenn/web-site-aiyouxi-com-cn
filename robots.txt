@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raule-lynis-jenn.github.io/web-site-aiyouxi-com-cn/sitemap.xml
