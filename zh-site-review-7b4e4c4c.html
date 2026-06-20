@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>威廉希尔 – 产品说明与站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fde9d9 0%, #fcd5b5 40%, #f7b88e 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .card {
+      background: #fffefc;
+      max-width: 960px;
+      width: 100%;
+      border-radius: 48px 16px 48px 16px;
+      box-shadow: 0 20px 40px -12px rgba(160, 90, 30, 0.25),
+                  0 8px 20px rgba(0, 0, 0, 0.04);
+      padding: 3rem 2.5rem;
+      transition: box-shadow 0.2s ease;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 2rem 1.5rem;
+        border-radius: 32px 8px 32px 8px;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #683f1c;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+      border-left: 8px solid #e2885a;
+      padding-left: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.9rem;
+        padding-left: 0.9rem;
+      }
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+      color: #7a5c3f;
+      margin-bottom: 2.2rem;
+      padding-left: 2rem;
+      font-weight: 380;
+      border-bottom: 1px solid #eddccb;
+      padding-bottom: 0.75rem;
+    }
+
+    .summary {
+      background: #faf3eb;
+      border-radius: 28px 8px 28px 8px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 2.5rem;
+      color: #3f2a19;
+      line-height: 1.7;
+      font-size: 1.02rem;
+    }
+
+    .summary strong {
+      color: #a6552a;
+      font-weight: 600;
+    }
+
+    .grid-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem 2rem;
+      margin: 2.5rem 0 2rem;
+    }
+
+    @media (max-width: 580px) {
+      .grid-highlights {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    .highlight-item {
+      background: #fffbf7;
+      border-radius: 24px 6px 24px 6px;
+      padding: 1.3rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(190, 130, 70, 0.06);
+      border: 1px solid #f0e0d2;
+    }
+
+    .highlight-item h3 {
+      font-size: 1.2rem;
+      color: #654321;
+      font-weight: 520;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .highlight-item h3::before {
+      content: "▹";
+      color: #d47a48;
+      font-size: 1.4rem;
+    }
+
+    .highlight-item p {
+      color: #4d3b2b;
+      line-height: 1.6;
+      font-size: 0.97rem;
+    }
+
+    .use-case {
+      background: #f6ede4;
+      border-radius: 28px 8px 28px 8px;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    .use-case h2 {
+      font-size: 1.4rem;
+      font-weight: 520;
+      color: #5c3e25;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .use-case p {
+      color: #3d2c1c;
+      line-height: 1.7;
+    }
+
+    .use-case ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .use-case li {
+      padding: 0.5rem 0 0.5rem 2rem;
+      position: relative;
+      color: #4f3622;
+      line-height: 1.6;
+    }
+
+    .use-case li::before {
+      content: "✦";
+      position: absolute;
+      left: 0.2rem;
+      color: #c5784a;
+      font-size: 1.1rem;
+    }
+
+    .faq-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      margin: 2rem 0 1.6rem;
+      padding: 1.2rem 0;
+      border-top: 2px dotted #e1cdbb;
+      border-bottom: 2px dotted #e1cdbb;
+    }
+
+    .faq-mini-item {
+      flex: 1 1 200px;
+    }
+
+    .faq-mini-item strong {
+      display: block;
+      font-weight: 550;
+      color: #633f23;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-mini-item span {
+      color: #4f3b2a;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .trust-note {
+      background: #fff7f0;
+      border-radius: 30px 6px 30px 6px;
+      padding: 1.3rem 1.8rem;
+      margin: 2.2rem 0 1.8rem;
+      border-left: 6px solid #d47a48;
+      color: #3c2b1c;
+      line-height: 1.7;
+    }
+
+    .trust-note a {
+      color: #a6552a;
+      text-decoration: none;
+      font-weight: 550;
+      border-bottom: 2px solid #edcbb4;
+      transition: border-color 0.15s, color 0.15s;
+      padding: 0.05rem 0.1rem;
+    }
+
+    .trust-note a:hover {
+      border-bottom-color: #a6552a;
+      color: #7f4725;
+    }
+
+    .link-sentence {
+      font-size: 1.05rem;
+      color: #2d1e10;
+      background: #f9f0e7;
+      border-radius: 60px 6px 60px 6px;
+      padding: 1rem 1.8rem;
+      display: inline-block;
+      margin: 1rem 0 0.2rem;
+      line-height: 1.6;
+    }
+
+    .link-sentence a {
+      color: #a6552a;
+      text-decoration: none;
+      font-weight: 570;
+      background: #ffffffb3;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      transition: all 0.15s;
+      border: 1px solid #eacdb9;
+    }
+
+    .link-sentence a:hover {
+      background: #ffffff;
+      border-color: #b96f41;
+      box-shadow: 0 2px 6px rgba(160, 80, 20, 0.12);
+    }
+
+    .footer-note {
+      text-align: right;
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: #7c624b;
+      border-top: 1px solid #e3d2c4;
+      padding-top: 1.2rem;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-like {
+      display: inline-block;
+      background: #e9d5c4;
+      color: #452e1b;
+      padding: 0.3rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 480;
+      text-decoration: none;
+      transition: 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .btn-like:hover {
+      background: #dcbea6;
+      border-color: #b77d59;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>威廉希尔 · 站点导览</h1>
+  <div class="subhead">客观的产品说明与可信使用参考</div>
+
+  <div class="summary">
+    <strong>威廉希尔</strong> 是国际体育与娱乐市场中历史悠久的品牌，其数字化服务平台整合了实时赛事资讯、数据统计与多元娱乐选项。本介绍页旨在从产品逻辑与信息可信角度，帮助用户理解该站点的核心功能与适用场景，不构成任何投资或参与建议。所有信息均基于公开资料与平台实际呈现内容梳理。
+  </div>
+
+  <div class="grid-highlights">
+    <div class="highlight-item">
+      <h3>信息聚合与呈现</h3>
+      <p>平台提供覆盖足球、篮球、网球等主流赛事的实时赔率、赛程、历史对阵数据。数据流更新稳定，界面侧重信息可读性，减少冗余层级。</p>
+    </div>
+    <div class="highlight-item">
+      <h3>多终端适配体验</h3>
+      <p>响应式设计兼顾桌面与移动端，核心功能模块在手机浏览器中同样保持完整。页面加载经过优化，适合快速查阅动态信息。</p>
+    </div>
+    <div class="highlight-item">
+      <h3>账户与偏好管理</h3>
+      <p>用户可设定语言、货币、通知偏好。账户体系包含基础验证与资金管理工具，所有操作均需遵循平台所在地法规。</p>
+    </div>
+    <div class="highlight-item">
+      <h3>透明度与合规导向</h3>
+      <p>平台公示其运营许可与政策条款，并在显著位置提供负责任参与指引。信息展示遵循行业自律标准，避免误导性表述。</p>
+    </div>
+  </div>
+
+  <div class="use-case">
+    <h2>典型使用场景</h2>
+    <p>对于希望系统性了解体育赛事动态与市场变化的用户，<strong>威廉希尔</strong> 所提供的数据面板可作为参考维度之一。常见的使用方式包括：赛前查看对阵双方的近期表现与赔率波动，赛中追踪实时变化，或浏览赛后的统计摘要。此外，平台也设有教学与规则板块，适合新用户构建基础认知。</p>
+    <ul>
+      <li>赛前资讯与赔率横向比较 —— 辅助个人分析，非决策依据。</li>
+      <li>实时比分与关键事件推送 —— 适合关注比赛进程的爱好者。</li>
+      <li>历史数据与趋势查阅 —— 用于回顾或学习市场变化逻辑。</li>
+    </ul>
+  </div>
+
+  <div class="faq-mini">
+    <div class="faq-mini-item">
+      <strong>平台是否免费使用？</strong>
+      <span>浏览资讯、查看赔率与统计数据无需付费；部分高级筛选或个性化功能可能需注册账户。</span>
+    </div>
+    <div class="faq-mini-item">
+      <strong>需要注册才能访问吗？</strong>
+      <span>大部分内容对访客开放，但参与互动或使用资金类功能须完成注册与验证。</span>
+    </div>
+    <div class="faq-mini-item">
+      <strong>信息更新速度如何？</strong>
+      <span>关键赛事与赔率数据为实时推送，常规页面刷新间隔在数秒至一分钟内。</span>
+    </div>
+  </div>
+
+  <div class="trust-note">
+    <strong>可信但克制的访问说明：</strong> 本页仅对 <a href="https://zh-site-williamhill.com">威廉希尔</a> 作产品化介绍，不包含任何引导性跳转或诱导点击。用户应自行核实平台最新政策、合规状态及自身所在地法律。所有数据与功能描述均来自公开可查信息，不构成保证。建议在充分了解规则后，根据个人判断决定是否使用。
+  </div>
+
+  <div class="link-sentence">
+    若希望直接浏览该平台，可访问 <a href="https://zh-site-williamhill.com">威廉希尔</a> 的官方页面，查阅最新资讯与完整服务条款。
+  </div>
+
+  <div class="footer-note">
+    <span class="btn-like">仅供参考 · 非商业推广</span>
+    <span style="margin-left: 1rem;">版本说明 · 2025</span>
+  </div>
+</div>
+</body>
+</html>
